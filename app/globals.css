@@ -1,26 +1,30 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-primary: #8a817c;
+  --color-primary-hover: #756d68;
+  --color-background: #ffffff;
+  --color-surface: #f9f9f9;
+  --color-muted: #d7d4d1;
+  --color-accent: #c2b9b2;
+  --color-dark: #2e2e2e;
+  --color-dark-muted: #666666;
+  --color-border: #e2e2e2;
+
+  --font-sora: "Sora", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  * {
+    @apply p-0 m-0 box-border;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    @apply bg-background text-dark font-sora;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility container {
+  @apply mx-auto max-w-7xl px-8;
 }
