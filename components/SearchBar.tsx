@@ -21,7 +21,7 @@ const SearchBar = ({ className, expandable = false }: Props) => {
   return (
     <div
       className={`flex items-center border pl-2 py-1 transition-all duration-300 w-fit ${
-        expandSearch ? "border-dark/10 rounded-full" : "border-transparent"
+        expandSearch ? "border-dark/10 rounded-md" : "border-transparent"
       } ${className}`}
     >
       <Search onClick={handleSearchClick} className="size-6 cursor-pointer" />
