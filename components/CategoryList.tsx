@@ -40,10 +40,10 @@ export function CategoryList() {
         {categories.map((cateogry) => (
           <CarouselItem
             key={cateogry.href}
-            className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5"
+            className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6"
           >
             <Link href={cateogry.href}>
-              <div className="bg-surface p-8 xl:p-14 rounded-lg">
+              <div className="bg-surface px-8 py-4 xl:px-14 xl:py-8 rounded-lg">
                 <Image
                   src={cateogry.iconSrc}
                   alt={cateogry.label}
