@@ -65,4 +65,82 @@ export const categories = [
     iconSrc: "/icons/shelf.svg",
     label: "Shelf",
   },
+  {
+    href: `/furnitures?category=others`,
+    iconSrc: "/icons/others.svg",
+    label: "Others",
+  },
+];
+
+export const furnitures = [
+  {
+    slug: "cozy-bed",
+    name: "Cozy Bed",
+    image: "/images/bed-1.png",
+    category: "bed",
+    price: 450,
+  },
+  {
+    slug: "urban-bed",
+    name: "Urban Bed",
+    image: "/images/bed-2.png",
+    category: "bed",
+    price: 520,
+  },
+  {
+    slug: "classic-armchair",
+    name: "Classic Armchair",
+    image: "/images/chair-1.png",
+    category: "chair",
+    price: 280,
+  },
+  {
+    slug: "linen-armchair",
+    name: "Linen Armchair",
+    image: "/images/chair-2.png",
+    category: "chair",
+    price: 310,
+  },
+  {
+    slug: "oak-closet",
+    name: "Oak Closet",
+    image: "/images/closet-1.png",
+    category: "closet",
+    price: 600,
+  },
+  {
+    slug: "writer-desk",
+    name: "Writer Desk",
+    image: "/images/desk-1.png",
+    category: "desk",
+    price: 220,
+  },
+  {
+    slug: "studio-desk",
+    name: "Studio Desk",
+    image: "/images/desk-2.png",
+    category: "desk",
+    price: 250,
+  },
+  {
+    slug: "wooden-shelf",
+    name: "Wooden Shelf",
+    image: "/images/shelf-1.png",
+    category: "shelf",
+    price: 180,
+  },
+  {
+    slug: "metal-shelf",
+    name: "Metal Shelf",
+    image: "/images/shelf-2.png",
+    category: "shelf",
+    price: 190,
+  },
+  {
+    slug: "cloud-sofa",
+    name: "Cloud Sofa",
+    image: "/images/sofa-1.png",
+    category: "sofa",
+    price: 750,
+  },
 ];
