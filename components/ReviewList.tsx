@@ -35,13 +35,7 @@ const ReviewList = () => {
   };
 
   return (
-    <Carousel
-      setApi={setApi}
-      opts={{
-        align: "start",
-      }}
-      className="w-full"
-    >
+    <Carousel setApi={setApi}>
       <CarouselContent>
         {reviews.map((review) => (
           <CarouselItem
@@ -58,7 +52,9 @@ const ReviewList = () => {
               />
             </div>
 
-            <h4 className="font-semibold text-2xl md:text-3xl mb-6">{review.name}</h4>
+            <h4 className="font-semibold text-2xl md:text-3xl mb-6">
+              {review.name}
+            </h4>
             <p className="text-lg md:text-xl max-w-xl xl:max-w-[90%] text-dark-muted/80 text-center xl:text-left">
               {review.content}
             </p>

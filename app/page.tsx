@@ -106,7 +106,7 @@ const Home = () => {
               What our Customers are Saying
             </h3>
           </div>
-          <div className="basis-1 xl:basis-1/2">
+          <div className="basis-1 xl:basis-1/2 w-full">
             <ReviewList />
           </div>
         </div>
