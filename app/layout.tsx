@@ -1,7 +1,8 @@
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -24,6 +25,7 @@ const RootLayout = ({
       <body className={`${sora.variable} antialiased`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

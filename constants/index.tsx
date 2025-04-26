@@ -186,3 +186,84 @@ export const reviews = [
       "The armchair looks amazing in my reading nook. Comfortable and beautifully made!",
   },
 ];
+
+export const footerLinks = {
+  categories: [
+    {
+      href: "/furnitures?category=sofa",
+      label: "Sofa",
+    },
+    {
+      href: "/furnitures?category=bed",
+      label: "Bed",
+    },
+    {
+      href: "/furnitures?category=desk",
+      label: "Desk",
+    },
+    {
+      href: "/furnitures?category=chair",
+      label: "Chair",
+    },
+    {
+      href: "/furnitures?category=closet",
+      label: "Closet",
+    },
+    {
+      href: "/furnitures?category=shelf",
+      label: "Shelf",
+    },
+    {
+      href: "/furnitures?category=others",
+      label: "Others",
+    },
+  ],
+  legal: [
+    {
+      href: "/",
+      label: "Terms of Service",
+    },
+    {
+      href: "/",
+      label: "Privacy Policy",
+    },
+    {
+      href: "/",
+      label: "Returns Policy",
+    },
+    {
+      href: "/",
+      label: "Shipping",
+    },
+    {
+      href: "/",
+      label: "Data Protection",
+    },
+  ],
+  company: [
+    {
+      href: "/",
+      label: "About",
+    },
+    {
+      href: "/",
+      label: "Faq",
+    },
+    {
+      href: "/",
+      label: "Contact",
+    },
+    {
+      href: "/",
+      label: "Careers",
+    },
+    {
+      href: "/",
+      label: "Vision",
+    },
+    {
+      href: "/",
+      label: "Culture",
+    },
+  ],
+};
