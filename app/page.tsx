@@ -1,6 +1,7 @@
 import { CategoryList } from "@/components/CategoryList";
 import FurnitureItem from "@/components/FurnitureItem";
-import { furnitures } from "@/constants";
+import ReasonItem from "@/components/ReasonItem";
+import { furnitures, reasons } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { HTMLAttributes } from "react";
@@ -72,6 +73,24 @@ const Home = () => {
               <p className="text-white font-semibold text-lg">View All</p>
             </div>
           </Link>
+        </div>
+      </section>
+
+      {/* Why Us Section */}
+      <section className="mb-20 lg:mb-40">
+        <div className="mb-12 md:mb-18 text-center">
+          <p className="text-primary font-medium text-base xl:text-lg">
+            Why Us
+          </p>
+          <h3 className="font-bold text-2xl sm:text-3xl md:text-4xl leading-snug">
+            Why People Choose Us
+          </h3>
+        </div>
+
+        <div className="flex justify-center flex-wrap gap-8">
+          {reasons.map((reason) => (
+            <ReasonItem key={reason.title} {...reason} />
+          ))}
         </div>
       </section>
     </main>

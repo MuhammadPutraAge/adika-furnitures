@@ -1,4 +1,5 @@
 import { SiInstagram, SiFacebook, SiX } from "react-icons/si";
+import { FiBox, FiUser, FiStar } from "react-icons/fi";
 
 export const navLinks = [
   {
@@ -142,5 +143,25 @@ export const furnitures = [
     image: "/images/sofa-1.png",
     category: "sofa",
     price: 750,
+  },
+];
+
+export const reasons = [
+  {
+    Icon: FiBox,
+    title: "Easy Returns",
+    description:
+      "Our return policy is simple and that is why customers love our shop.",
+  },
+  {
+    Icon: FiUser,
+    title: "Customer Service",
+    description: "We offer amazing customer service no matter what happens.",
+  },
+  {
+    Icon: FiStar,
+    title: "High Quality",
+    description:
+      "All of our products go through very strict inspection before we dispatch them.",
   },
 ];
