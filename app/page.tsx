@@ -1,6 +1,7 @@
 import { CategoryList } from "@/components/CategoryList";
 import FurnitureItem from "@/components/FurnitureItem";
 import ReasonItem from "@/components/ReasonItem";
+import ReviewList from "@/components/ReviewList";
 import { furnitures, reasons } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
@@ -91,6 +92,23 @@ const Home = () => {
           {reasons.map((reason) => (
             <ReasonItem key={reason.title} {...reason} />
           ))}
+        </div>
+      </section>
+
+      {/* Reviews Section */}
+      <section className="mb-20 lg:mb:40">
+        <div className="flex flex-col xl:flex-row items-center justify-between bg-transparent xl:bg-surface h-[70vh] max-h-96 xl:max-h-none rounded-2xl xl:px-18 gap-8">
+          <div className="mb-2 md:mb-4 xl:mb-18 basis-1 xl:basis-1/2 text-center xl:text-left">
+            <p className="text-primary font-medium text-base xl:text-lg">
+              Our Reviews
+            </p>
+            <h3 className="font-bold text-2xl sm:text-3xl md:text-4xl leading-snug">
+              What our Customers are Saying
+            </h3>
+          </div>
+          <div className="basis-1 xl:basis-1/2">
+            <ReviewList />
+          </div>
         </div>
       </section>
     </main>

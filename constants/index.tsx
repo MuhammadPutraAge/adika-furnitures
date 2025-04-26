@@ -165,3 +165,24 @@ export const reasons = [
       "All of our furnitures go through very strict inspection before we dispatch them.",
   },
 ];
+
+export const reviews = [
+  {
+    name: "Sophia Martinez",
+    image: "https://randomuser.me/api/portraits/women/65.jpg",
+    content:
+      "Absolutely love my new sofa! It's super comfy, stylish, and fits my space perfectly.",
+  },
+  {
+    name: "Liam Johnson",
+    image: "https://randomuser.me/api/portraits/men/45.jpg",
+    content:
+      "Fast delivery, great quality, and very easy to assemble. Exceeded my expectations!",
+  },
+  {
+    name: "Emily Chen",
+    image: "https://randomuser.me/api/portraits/women/32.jpg",
+    content:
+      "The armchair looks amazing in my reading nook. Comfortable and beautifully made!",
+  },
+];
