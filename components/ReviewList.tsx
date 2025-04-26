@@ -11,6 +11,7 @@ import {
 } from "./ui/carousel";
 import { useEffect, useState } from "react";
 import { reviews } from "@/constants";
+import Autoplay from "embla-carousel-autoplay";
 
 const ReviewList = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -35,7 +36,7 @@ const ReviewList = () => {
   };
 
   return (
-    <Carousel setApi={setApi}>
+    <Carousel setApi={setApi} plugins={[Autoplay({ delay: 5000 })]}>
       <CarouselContent>
         {reviews.map((review) => (
           <CarouselItem
