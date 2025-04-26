@@ -162,6 +162,6 @@ export const reasons = [
     Icon: FiStar,
     title: "High Quality",
     description:
-      "All of our products go through very strict inspection before we dispatch them.",
+      "All of our furnitures go through very strict inspection before we dispatch them.",
   },
 ];

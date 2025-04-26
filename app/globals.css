@@ -13,6 +13,8 @@
   --color-border: #e2e2e2;
 
   --font-sora: "Sora", sans-serif;
+
+  --breakpoint-xs: 480px;
 }
 
 @layer base {

@@ -3,8 +3,8 @@ interface Props {
 }
 
 const Badge = ({ title }: Props) => (
-  <div className="bg-muted px-4 py-1 rounded-md">
-    <p className="text-primary-hover font-semibold capitalize">{title}</p>
+  <div className="bg-surface px-4 py-1 rounded-md border border-primary">
+    <p className="text-primary font-semibold capitalize">{title}</p>
   </div>
 );
 
