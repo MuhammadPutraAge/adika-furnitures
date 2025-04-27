@@ -69,7 +69,7 @@ const ReviewList = () => {
             key={index}
             onClick={() => handleThumbClick(index)}
             className={`w-2 h-2 rounded-full border border-primary cursor-pointer ${
-              index + 1 === current ? "bg-primary border" : "bg-surface"
+              index + 1 === current ? "bg-primary" : "bg-surface"
             }`}
           />
         ))}

@@ -8,25 +8,41 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
+  SheetDescription,
   SheetTitle,
   SheetTrigger,
 } from "./ui/sheet";
 import { navLinks, socialLinks } from "@/constants";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { FormEventHandler, useState } from "react";
 
 const Navbar = () => {
   const pathname = usePathname();
+  const router = useRouter();
+
+  const [sheetOpen, setSheetOpen] = useState(false);
+
+  const handleSearch: FormEventHandler<HTMLFormElement> = (e) => {
+    const formData = new FormData(e.currentTarget);
+    const search = formData.get("search") as string;
+
+    if (search) {
+      router.push(`/furnitures?q=${search}`);
+      setSheetOpen(false);
+    }
+  };
 
   return (
     <nav className="container py-10 flex items-center justify-between relative">
-      <Sheet>
-        <SheetTrigger>
+      <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
+        <SheetTrigger className="outline-none">
           <div className="bg-surface p-4 rounded-full cursor-pointer">
             <Equal className="text-dark size-6" />
           </div>
         </SheetTrigger>
         <SheetContent side="left" className="pt-12 lg:pt-24 pb-12">
           <SheetTitle />
+          <SheetDescription />
 
           <div className="flex flex-col items-center gap-8 lg:gap-16 h-full">
             <SheetClose asChild>
@@ -43,7 +59,10 @@ const Navbar = () => {
 
             <div className="flex-1 flex flex-col justify-between w-full px-6">
               <div className="flex flex-col items-center gap-8 lg:12">
-                <SearchBar className="lg:hidden w-full" />
+                <SearchBar
+                  className="lg:hidden w-full"
+                  onSubmit={handleSearch}
+                />
                 <div className="flex flex-col items-center gap-4 lg:gap-8">
                   {navLinks.map((link) => (
                     <SheetClose key={link.href} asChild>
@@ -97,7 +116,11 @@ const Navbar = () => {
       </Link>
 
       <div className="flex items-center gap-6">
-        <SearchBar className="hidden lg:flex" expandable />
+        <SearchBar
+          className="hidden lg:flex"
+          expandable
+          onSubmit={handleSearch}
+        />
         <ShoppingCart className="size-6" />
         <Link href="/login" className="hidden lg:block">
           <User className="size-6" />
